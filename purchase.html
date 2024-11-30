@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="receipt-body">
+    <div class="receipt-header">
+        <h1 class="receipt-title">Purchase Receipt</h1>
+    </div>
+    <section class="receipt" id="receipt">
+        <div class="receipt-container">
+            <h2>Items Purchased:</h2>
+            <ul id="receipt-items"></ul>
+            <h3>Total: ₱<span id="receipt-total">0.00</span></h3>
+        </div>
+        <a href="index.html" class="btn">Back to Home</a>
+    </section>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const cart = JSON.parse(params.get('cart') || '[]');
+        const total = params.get('total') || '0.00';
+        const receiptItems = document.getElementById('receipt-items');
+        const receiptTotal = document.getElementById('receipt-total');
+        let totalAmount = 0;
+        cart.forEach(item => {
+            const itemTotal = parseFloat(item.price.slice(1)) * item.quantity; 
+            totalAmount += itemTotal;
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - ${item.price} x ${item.quantity} = ₱${itemTotal.toFixed(2)}`;
+            receiptItems.appendChild(li);
+        });
+        receiptTotal.textContent = totalAmount.toFixed(2);
+    </script>
+</body>
+</html>

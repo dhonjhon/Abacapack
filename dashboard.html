@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            background-image: url('bg.png'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 1px;
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            max-width: 300px;
+            margin-bottom: 1px;
+        }
+
+        .slogan {
+            font-size: 2rem;
+            color: var(--main-color);
+            margin-bottom: 5px;
+            text-align: center; 
+        }
+
+        .coffee-image {
+            max-width: 30%; 
+            height: auto; 
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="ricecakes.png" alt="#" class="logo"> 
+        <h1 class="slogan">Global Rice Cakes</h1> 
+        <img src="cakes.png" alt="Coffee Image" class="coffee-image"> 
+        <h1>Login</h1>
+        <form action="index.html" method="GET">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+</body>
+</html>

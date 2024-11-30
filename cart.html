@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="cake.png" alt="">
+        </a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <ul class="navbar">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#customers">Customers</a></li>
+        </ul>
+        <div class="header-icon">
+            <i class='bx bx-cart-alt' id="cart-icon"></i>
+            <i class='bx bx-search-alt' id="search-icon"></i>
+        </div>
+    </header>
+    <section class="cart" id="cart">
+        <div class="heading">
+            <h2>Your Cart</h2>
+        </div>
+        <div class="cart-container">
+           <!--Item here-->
+        </div>
+        <div class="cart-total">
+            <h3>Total: ₱<span id="total-price">0.00</span></h3>
+        </div>
+            <!--Purchase here-->
+            <div class="purchase-container">
+                <form id="purchase-form" action="purchase.html" method="GET">
+                    <button id="purchase-button" class="btn" type="submit">Purchase</button>
+                </form>
+            </div>
+    </section>
+    <section class="footer">
+        <div class="footer-box">
+            <h2>Global Rice Cakes</h2>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Help or Customer Service</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>View Guides</h3>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog Posts</a></li>
+            <li><a href="#">Our Branches</a></li>
+        </div>
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <div class="contact">
+                <span><i class='bx bxs-map'></i>Adamson University</span>
+                <span><i class='bx bxs-phone'></i>123-567-890</span>
+                <span><i class='bx bxs-envelope'></i>globalricecakes@gmail.com</span>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>© 2024 Global Rice Cakes. All Rights Reserved.</p>
+    </div>
+    <script src="cart.js"></script>
+</body>
+</html>
+
